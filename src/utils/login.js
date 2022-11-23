@@ -3,7 +3,7 @@ export default async function login(username, password, email, loginState) {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
-      email: password,
+      email: email,
       username: username,
       password: password,
     }),
