@@ -1,3 +1,7 @@
+# Tips for Team Cargo
+
+Please run npm install before starting the app - the project uses material UI icons and needs an external library for this!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
