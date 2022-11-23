@@ -12,6 +12,6 @@ export default async function signup(username, password, loginState) {
     loginState(true);
   } else {
     loginState(false);
-    throw new Error("Login failed");
+    throw new Error("SignUp failed");
   }
 }
