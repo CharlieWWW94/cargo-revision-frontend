@@ -13,6 +13,7 @@ import UserPage from "./pages/UserPage";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
+
   useEffect(() => {
     console.log(loggedIn);
   }, [setLoggedIn]);
