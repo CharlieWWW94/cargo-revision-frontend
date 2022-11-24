@@ -3,11 +3,6 @@ import "bulma/css/bulma.min.css";
 import { mdiFerry } from "@mdi/js";
 import Navbar from "./components/Navbar";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
-import SignUpPage from "./pages/SignupPage";
-import UserPage from "./pages/UserPage";
 
 function App() {
   return (
@@ -16,12 +11,8 @@ function App() {
         <Navbar />
       </header>
       <main>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/login" element={<LoginPage />}></Route>
-          <Route path="/sign-up" element={<SignUpPage />}></Route>
-          <Route path="/user" element={<UserPage />}></Route>
-        </Routes>
+        <h1>Hello Team Cargo!</h1>
+        <Icon path={mdiFerry} size={2} />
       </main>
     </div>
   );
