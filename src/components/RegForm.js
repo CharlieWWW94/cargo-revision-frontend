@@ -1,12 +1,29 @@
+import login from "../utils/login";
+import signup from "../utils/signup";
+
 export default function RegForm(props) {
-  function submitHandler(event) {
+  async function submitHandler(event) {
     event.preventDefault();
     const username = event.target.username.value;
     const password = event.target.password.value;
     const email = event.target.email.value;
 
-    //Api call with form data goes here
-    props.login(true, username);
+    //Add try catch here !
+    if (props.type === "Sign up") {
+      const accountCreated = await signup(username, password, email);
+      if (accountCreated) {
+        props.login(true, username);
+      } else {
+        throw new Error("Sign up failed");
+      }
+    } else {
+      const accountActive = await login(username, password, email);
+      if (accountActive) {
+        props.login(true, username);
+      } else {
+        throw new Error("Login failed");
+      }
+    }
   }
 
   return (
