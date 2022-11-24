@@ -28,7 +28,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <Navbar />
+        <Navbar loginState={loggedIn} username={username} />
       </header>
       <main>
         <Routes>
