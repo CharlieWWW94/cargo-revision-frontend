@@ -1,6 +1,6 @@
 import { mdiFerry } from "@mdi/js";
 import Icon from "@mdi/react";
-
+import { Link } from "react-router-dom";
 export default function Navbar(props) {
   return (
     <>
@@ -33,8 +33,12 @@ export default function Navbar(props) {
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="buttons">
-                <a class="button is-warning">Sign up</a>
-                <a class="button is-warning">Log in</a>
+                <Link to="/sign-up" class="mr-3">
+                  <a class="button is-warning">Sign up</a>
+                </Link>
+                <Link to="/login">
+                  <a class="button is-warning">Log in</a>
+                </Link>
               </div>
             </div>
           </div>
