@@ -10,17 +10,17 @@ export default function Navbar(props) {
         aria-label="main navigation"
       >
         <div class="navbar-brand">
-          <a class="navbar-item" href="https://bulma.io"></a>
-          <div class="navbar-item">
-            <Link to="/">
-              <Icon path={mdiFerry} size={1} />
+          <div class="navbar-item ml-4 mr-4">
+            <Link to="/" class="is-flex">
+              <Icon path={mdiFerry} size={1} class="is-primary" />
+              <p class="title has-text-light is-6 mt-1 ml-2">CARGO</p>
             </Link>
           </div>
           {props.loginState ? (
-            <div class="navbar-start has-background-info ml-5">
-              <Link to="/user" class="navbar-item title is-6 has-text-white">
+            <div class="navbar-start has-background-info navbar-item">
+              <Link to="/user" class="is-flex has-text-white">
                 <Icon path={mdiCardAccountDetails} size={1} class="mr-2" />
-                {props.username}
+                <p class="title has-text-light mt-1 is-6">{props.username}</p>
               </Link>
             </div>
           ) : (
@@ -28,7 +28,7 @@ export default function Navbar(props) {
           )}
           <a
             role="button"
-            class="navbar-burger"
+            class="navbar-burger has-text-white"
             aria-label="menu"
             aria-expanded="false"
             data-target="navbarBasicExample"

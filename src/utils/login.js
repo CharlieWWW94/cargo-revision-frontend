@@ -1,5 +1,5 @@
-export default async function login(username, password, email, loginState) {
-  const res = await fetch("http://localhost:5001/login", {
+export default async function login(username, password, email) {
+  const res = await fetch("http://localhost:5001/reg/login", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -9,10 +9,10 @@ export default async function login(username, password, email, loginState) {
     }),
   });
 
-  if (res.data.loggedIn) {
-    loginState(true);
+  const resJson = await res.json();
+  if (resJson.loggedIn) {
+    return true;
   } else {
-    loginState(false);
-    throw new Error("Login failed");
+    throw new Error("login failed");
   }
 }
