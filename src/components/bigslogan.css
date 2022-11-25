@@ -1,0 +1,24 @@
+.big-slogan {
+  font-size: 100px;
+  font-weight: 900;
+}
+
+.purp {
+  background-color: rgb(156, 21, 224);
+  min-width: 100%;
+}
+
+.shift-right {
+  min-width: 100%;
+  text-align: right;
+}
+
+.shift-center {
+  min-width: 100%;
+  text-align: center;
+}
+
+.test {
+  min-width: 100%;
+  text-align: right;
+}
