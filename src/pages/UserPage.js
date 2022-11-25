@@ -1,10 +1,13 @@
+
 import SideBar from "../components/SideBar";
+import FlashcardList from "../components/FlashcardList";
 
 export default function UserPage(props) {
   return (
     <section class="columns">
       <SideBar />
-      {/* flashcards go here */}
+       <FlashcardList flashcards={props.flashcardInfo} />
     </section>
   );
 }
+  
