@@ -7,7 +7,7 @@ export default function BigSlogan(props) {
         <h2 className="big-slogan mt-2 ">Work Smarter</h2>
       </div>
       <br></br>
-      <div className="purp">
+      <div className="purp shift-center">
         <h2 className="big-slogan has-text-light">Not Harder</h2>
       </div>
       <div className="test">

@@ -5,6 +5,8 @@
   background-size: cover;
   background-color: rgb(105, 105, 105);
   background-blend-mode: multiply;
+  justify-content: center;
+  align-items: center;
 }
 
 .brain-span {

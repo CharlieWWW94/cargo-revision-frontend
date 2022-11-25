@@ -13,6 +13,11 @@
   text-align: right;
 }
 
+.shift-center {
+  min-width: 100%;
+  text-align: center;
+}
+
 .test {
   min-width: 100%;
   text-align: right;
