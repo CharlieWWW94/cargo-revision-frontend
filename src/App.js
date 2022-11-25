@@ -53,40 +53,11 @@ function App() {
 
 {/* <FlashcardList flashcards={flashcards} /> */}
 const SAMPLE = [
-  {
-    id:1,
-    question: "What is 2+2?",
-    answer: "4",
-    options: [
-      '2',
-      '3',
-      '4',
-      '5'
-    ]
-  },
-  {
-    id:2,
-    question: "What is your date of birth?",
-    answer: "21",
-    options: [
-      '21',
-      '31',
-      '4',
-      '5'
-    ]
-  },
-  {
-    id:3,
-    question: "What is your hobby?",
-    answer: "writing",
-    options: [
-      'reading',
-      'writing',
-      'cooking',
-      'screaming'
-    ]
-  }
-
-
+  {name: "Physics", info:"Quantum mec- Google"},
+  {name: "What makes a plant green?", info: "Chlorophyll, important information to succeed in life"},
+  {name: "JavaScript", info: "Javascript is used by web devs"},{name: "Python", info: "My first language that I learned"},
+  {name: "algebra", info: "(-b±√(b²-4ac))/(2a)"},
+  {name: "irregular shapes", info: "Trapezium, rhombus, parallelagram"}
+  
 ]
 export default App;

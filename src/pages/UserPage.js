@@ -1,4 +1,3 @@
-
 import SideBar from "../components/SideBar";
 import FlashcardList from "../components/FlashcardList";
 
