@@ -1,0 +1,12 @@
+.big-hero {
+  height: 60vh;
+  background-image: url("../images/container.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(105, 105, 105);
+  background-blend-mode: multiply;
+}
+
+.brain-span {
+  color: rgb(156, 21, 224);
+}
