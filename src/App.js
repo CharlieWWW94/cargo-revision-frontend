@@ -1,18 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import "bulma/css/bulma.min.css";
-import FlashcardList from './components/FlashcardList';
-import './components/flashcard.css'
+import FlashcardList from "./components/FlashcardList";
+import "./components/flashcard.css";
 import Navbar from "./components/Navbar";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import SignUpPage from "./pages/SignupPage";
 import UserPage from "./pages/UserPage";
-import './components/Flashcard'
-
+import "./components/Flashcard";
+import getSets from "./utils/getSets";
 
 function App() {
-  const [flashcards, setFlashcards] = useState(SAMPLE)
+  getSets("user");
+  const [flashcards, setFlashcards] = useState(SAMPLE);
   const [loggedIn, setLoggedIn] = useState(false);
   const [username, setUsername] = useState("");
   useEffect(() => {
@@ -41,23 +42,28 @@ function App() {
             path="/sign-up"
             element={<SignUpPage login={manageLogIn} />}
           ></Route>
-          <Route path="/user" element={<UserPage flashcardInfo = {flashcards}/>}></Route>
+          <Route
+            path="/user"
+            element={<UserPage flashcardInfo={flashcards} />}
+          ></Route>
         </Routes>
-    
       </main>
-    
     </div>
   );
 }
 
-
-{/* <FlashcardList flashcards={flashcards} /> */}
+{
+  /* <FlashcardList flashcards={flashcards} /> */
+}
 const SAMPLE = [
-  {name: "Physics", info:"Quantum mec- Google"},
-  {name: "What makes a plant green?", info: "Chlorophyll, important information to succeed in life"},
-  {name: "JavaScript", info: "Javascript is used by web devs"},{name: "Python", info: "My first language that I learned"},
-  {name: "algebra", info: "(-b±√(b²-4ac))/(2a)"},
-  {name: "irregular shapes", info: "Trapezium, rhombus, parallelagram"}
-  
-]
+  { name: "Physics", info: "Quantum mec- Google" },
+  {
+    name: "What makes a plant green?",
+    info: "Chlorophyll, important information to succeed in life",
+  },
+  { name: "JavaScript", info: "Javascript is used by web devs" },
+  { name: "Python", info: "My first language that I learned" },
+  { name: "algebra", info: "(-b±√(b²-4ac))/(2a)" },
+  { name: "irregular shapes", info: "Trapezium, rhombus, parallelagram" },
+];
 export default App;
